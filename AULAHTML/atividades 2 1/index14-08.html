@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>turma C</title>
+        <style>
+            form {
+                background-color: cornflowerblue;
+                width: 300px;
+                padding: 20px;
+                border-radius: 20px;
+            }
+            form label {
+                font-weight: 700;
+                display: block;
+            }
+
+            form input {
+                margin-bottom: 10px;
+            }
+
+            form select {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <!-- titulos do h1 ao h6-->
+             <section>
+                <h1>titulo h1</h1>
+                <h2>titulo h2</h2>
+                <h3>titulo h3</h3>
+                <h4>titulo h4</h4>
+                <h5>titulo h5</h5>
+                <h6>titulo h6</h6>
+             </section>
+
+            <section>
+                <h2>titulo h2 do paragrafo</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit quidem aspernatur, voluptas debitis reiciendis praesentium reprehenderit dolorem maiores magni dolore corrupti qui ad ipsum quasi officiis enim vero accusamus sunt.
+                </p>
+            </section>
+            <section>
+                <h2>inclusão de imagem</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iure fugiat in, corrupti facilis mollitia blanditiis laudantium asperiores ut rem necessitatibus autem alias est dolores dicta sint vel quisquam officiis!</p>
+                <!--realizando a chamada de uma imagem-->
+                <img src="https://cdn.pixabay.com/photo/2022/02/20/20/31/playstation-7025275_1280.jpg" width="500">
+            </section>
+
+            <!--lista ordenada-->
+            <section>
+                <h2>lista ordenada</h2>
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                </ol>
+                <h2>lista não ordenada</h2>
+                <ul>
+                    <li>Farinha</li>
+                    <li>Meia duzia de ovos</li>
+                    <li>Fermento</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Formulario de cadastro</h2>
+                <form action="/cadastro.php" method="post">
+                    <div>
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome_usuario" placeholder="digite seu nome"><br>                      
+                    </div>
+                    <div>
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade" name="idade_usuario" placeholder="digite sua idade"><br>
+                    </div>
+                    <div>
+                        <label for="conteudo">selecione seu conteudo favorito</label>
+                        <select id="conteudo" name="conteudo">
+                            <option value="" disabled selected>selecione</option>
+                            <option value="web">desenvolvimento web</option>
+                            <option value="UX">UX e UI Design</option>
+                        </select>
+                    </div> 
+                    <div>
+                        <label for="mensagem">justifique sua resposta</label>
+                        <textarea id="mensagem" placeholder="digite aqui ..."></textarea>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body> 
+</html>

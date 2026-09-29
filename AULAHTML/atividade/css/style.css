@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0PX;
+    padding: 0px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+header{
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+main{
+    padding: 20px;
+    flex: 1;
+}
+.vitrineprodutos{
+    display: flex;
+}
+.vitrineprodutos .produtos{
+    border: 1px solid black;
+    padding: 20px;
+    min-height: 200px;
+}
+footer{
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+footer p{
+    font-weight: 700px;
+}

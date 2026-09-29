@@ -1,0 +1,10 @@
+h1{
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}

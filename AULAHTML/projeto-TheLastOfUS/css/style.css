@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #adad82;
+    padding: 20px;
+}
+
+header div span{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+header .menu{
+    background-color: #d2d2c1;
+    padding: 10px;
+}
+ header .menu a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 0 15px;
+ }
+section{
+    background-color: #d2d2c1;
+    padding: 20px;
+}
+ .banner-home{
+    width: 100%;
+
+ }

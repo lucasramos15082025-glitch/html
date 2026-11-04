@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Básico com Tags - JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #resultado {
+            margin-top: 20px;
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: left;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        /* Estilos aplicados às tags geradas via JS */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            padding: 4px 0;
+            font-size: 15px;
+            color: #333;
+        }
+        .mensagem-erro {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Gerador de Tabuada</h2>
+        <p>Digite um número entre 1 e 10:</p>
+        
+        <!-- Input HTML para receber o valor do usuário -->
+        <input type="number" id="numeroInput" placeholder="Ex: 5">
+        <br>
+        <button onclick="gerarTabuada()">Gerar Tabuada</button>
+
+        <div id="resultado">O resultado aparecerá aqui...</div>
+    </div>
+
+    <script>
+        function gerarTabuada(){
+            const inputElem = document.getElementById("numeroInput")
+            const valorInput = inputElem.value;
+            const numero = Number(valorInput)
+            const divResultado =document.getElementById("resultado")
+            
+            //limpa o conteudo
+            divResultado.innerHTML = "";
+
+            if(valorInput === ""){
+                divResultado.innerHTML = "<span Class='mensagem-erro'>Digite um valor válido</span>";
+                }else if(numero < 1 || numero > 10){
+                    divResultado.innerHTML = "<span Class='mensagem-erro'>Digite um entre 1 a 10</span>";
+                }
+
+                //criando um elemento dotipo ul
+            const lista = document.createElement("ul")
+
+            for(let i = 1; i <= 10; i++){
+                const itemLista = document.createElement("li");
+                itemLista.innerHTML = `${numero} x ${i} = ${numero * i}`
+
+                lista.appendChild(itemLista)
+            }
+
+            divResultado.appendChild(lista)
+        }
+
+    </script>
+
+</body>
+</html>

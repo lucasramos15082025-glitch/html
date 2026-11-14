@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Listagem - Estados das Promises</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h2>Consulta de Estoque (GET)</h2>
+        <p>Busca da listagem completa de itens via API:</p>
+
+        <form id="formConsulta">
+            <div class="botoes">
+                <button type="submit" id="btnConsultar">Consultar Listagem</button>
+                <button type="button" id="btnLimpar">Limpar</button>
+            </div>
+        </form>
+
+        <div id="resultadoPainel"></div>
+    </div>
+
+    <script>
+            const formConsulta = document.getElementById("formConsulta")
+            const resultadoPainel = document.getElementById("resultadoPainel")
+            const btnConsultar = document.getElementById("btnConsult-ar")
+            const btnLimpar = document.getElementById("btnLimpar")
+            
+            btnLimpar.addEventListener("click",()=>{
+                formConsulta.reset()
+                resultadoPainel.style.display = "none"
+                resultadoPainel.innerHTML = ""
+            })
+
+            const alterarEstado = (carregando) =>{
+                btnConsultar.disabled = carregando;
+                btnConsultar.innerText = carregando? "consultando..":"consultar listagem"
+            }
+            formConsulta.addEventListener("submit", async (evento) =>{
+                evento.preventDefault()
+                alterarEstado(true)
+            })
+    </script>
+
+</body>
+</html>

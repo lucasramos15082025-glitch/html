@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* border-box: faz o padding entrar DENTRO da largura do elemento.
+       Sem isso, "width: 100% + padding: 20px" soma 100% + 40px e gera
+       rolagem horizontal no celular. Essencial para o layout fluido. */
+    box-sizing: border-box;
+}
+header{
+    background-color: #adad82;
+    padding: 20px;
+}
+
+body{
+     background-color: #e8e8d9;
+}
+header div span{
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+header nav{
+    background-color: #e8e8d9;
+    padding: 10px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #adad82;
+    display: inline-block;
+    margin: 0 10px;
+}
+main section{
+    padding: 20px;
+}
+main section .bannerhome{
+    width: 100%;
+    /* Imagem fluida: a foto original tem 1376px de largura, então
+       max-width impede que ela estoure a tela em telas pequenas;
+       height: auto preserva a proporção (sem distorcer) e
+       display: block remove o espaço residual de linha de base. */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.conteudo{
+    padding: 20px;
+    background-color: #adad82;
+}
+.conteudo h1, p{
+    color: white;
+}
+.conteudo p{
+    margin-top: 10px;
+}
+
+footer{
+    min-height: 100px;
+    background-color: #adad82;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+footer p{
+    text-align: center;
+}
+@media (min-width: 768px){
+    header{
+        padding: 30px;
+    }
+    header div span{
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    header .menu{
+        padding: 15px;
+    }
+    header .menu a{
+        margin: 0 20px;
+        font-size: 18px;
+    }
+    main section{
+        padding: 30px;
+    }
+}
+@media (min-width: 992px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    header div span{
+        margin-bottom: 0px;
+        font-size: 26px;
+    }
+    header .menu{
+        background-color: transparent;
+        padding: 0px;
+    }
+    header .menu a{
+        color: white;
+        margin-right: 30px;
+        font-size: 16px;
+    }
+    main{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    main section{
+        padding: 40px;
+    }
+    main .conteudo{
+        padding: 40px;
+    }
+    main .conteudo h1{
+        font-size: 38px;
+    }
+    main .conteudo p{
+        font-size: 19px;
+    }
+    footer{
+        padding: 40px;
+    }
+    footer p{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}

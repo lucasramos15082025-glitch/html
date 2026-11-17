@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color: #adad82;
+    padding: 20px;
+}
+header div span{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+header .menu{
+    background-color: #d2d2c1;
+    padding: 10px;
+}
+header .menu a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 0 15px;
+}
+section {
+    background-color: #d2d2c1;
+    padding: 20px;
+}
+.banner-home{
+    width: 100%;
+}
+.section p {
+    color: #adad82;
+}
+.section h1{
+    margin-bottom: 10px;
+    color: #adad82;
+}
+footer p{
+    color: white;
+    font-weight: 700;
+    margin-top: 10px;
+    text-align: center;
+}
+footer{
+    background-color: #adad82;
+    min-height: 50px;
+    padding: 20px;
+}
